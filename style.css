@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 /* Global styles */
 * {
   margin: 0;
@@ -594,3 +595,601 @@ footer a:hover {
     font-size: 0.9rem; /* Smaller original price size on mobile */
   }
 }
+=======
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+:root {
+  --background-color: #f4f4f4;
+  --text-color: black;
+  --header-background-color: #003580;
+  --link-color: white;
+  --button-background: #ff9800;
+  --button-hover: #e68a00;
+  --footer-background: #003580;
+  --card-background: white;
+  --card-text-color: #333;
+  --card-hover-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  line-height: 1.6;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #e0e0e0;
+  --header-background-color: #1f1f1f;
+  --link-color: #ff9800;
+  --button-background: #333333;
+  --button-hover: #555555;
+  --footer-background: #1f1f1f;
+  --card-background: #333333;
+  --card-text-color: #e0e0e0;
+  --card-hover-shadow: rgba(255, 255, 255, 0.1);
+}
+
+/* Header Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Center items vertically */
+  background-color: var(--header-background-color);
+  color: var(--text-color);
+  color: white;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .logo h1 {
+  font-size: 1.8rem;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  align-items: center; /* Aligns items in the center */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Spacing between menu items */
+  margin: 0; /* Remove default margin */
+}
+
+.nav-links li {
+  display: inline; /* Ensure inline items */
+}
+
+.nav-links li a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff9800;
+}
+
+button {
+  background-color: var(--button-background);
+  color: var(--link-color);
+}
+
+button:hover {
+  background-color: var(--button-hover);
+}
+
+.dark-mode-toggle {
+  height: 30px;
+  width: 30px;
+  border-radius: 10px 0 10px 0;
+}
+
+/* User Menu styles */
+.user-menu {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.user-menu img {
+  width: 37px;
+  height: 37px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+/* Dropdown hidden by default */
+.user-menu .dropdown {
+  display: none; /* Hide dropdown by default */
+  position: absolute;
+  right: 0;
+  top: 50px;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+.user-menu .dropdown.active {
+  display: block;
+}
+
+/* Show dropdown on hover */
+.user-menu:hover .dropdown {
+  display: block; /* Show dropdown when hovering over the user menu */
+}
+
+.user-menu .dropdown a {
+  display: block;
+  padding: 10px;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.user-menu .dropdown a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none; /* Hide the button by default */
+  background: none; /* Remove default background */
+  border: none; /* Remove default border */
+  color: white; /* Text color */
+  font-size: 1.5rem; /* Font size for hamburger icon */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Hero Section */
+.hero {
+  background: url("images/hero-background.jpg") center/cover no-repeat; /* Background image */
+  height: 80vh; /* Full viewport height */
+  display: flex; /* Flexbox for alignment */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  position: relative; /* Position for child elements */
+}
+
+.hero-content {
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 30px; /* Padding around content */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.hero-content h2 {
+  font-size: 3rem; /* Large heading */
+  margin-bottom: 10px; /* Spacing below heading */
+}
+
+.hero-content p {
+  font-size: 1.2rem; /* Subheading size */
+  margin-bottom: 20px; /* Spacing below paragraph */
+}
+
+.search-form {
+  display: flex; /* Flexbox for form layout */
+  gap: 10px; /* Space between input fields */
+  flex-wrap: wrap; /* Wrap inputs on smaller screens */
+  justify-content: center; /* Center the inputs */
+}
+
+.search-form input,
+.search-form select {
+  padding: 10px; /* Padding inside inputs */
+  font-size: 1rem; /* Font size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.search-form button {
+  background-color: #ff9800; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 20px; /* Padding inside button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+}
+
+.search-form button:hover {
+  background-color: #e68a00; /* Button hover color */
+}
+
+/* Popular Destinations Section */
+.popular-destinations {
+  padding: 50px 0;
+  text-align: center; /* Center the text */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.popular-destinations h2 {
+  font-size: 2.5rem; /* Heading size */
+  margin-bottom: 20px; /* Spacing below heading */
+  color: #333; /* Heading color */
+}
+
+.destinations-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 0 20px; /* Padding on the sides */
+}
+
+.destination {
+  position: relative; 
+  background-color: var(--card-background);
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.destination img {
+  width: 100%; /* Make image full width */
+  height: 150px; /* Fixed height for uniformity */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.destination h3 {
+  font-size: 1.5rem; /* Destination name size */
+  margin: 10px 0; /* Spacing above and below */
+}
+
+.destination p {
+  font-size: 1rem; /* Price size */
+  color: #666; /* Price color */
+  margin-bottom: 15px; /* Spacing below price */
+}
+
+/* Hover effect */
+.destination:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px var(--card-hover-shadow); /* Lift effect on hover */
+}
+
+.details {
+    display: none; /* Hide details by default */
+  }
+
+  .destination:hover .details {
+    display: block; /* Show details on hover */
+    color: #555; /* Text color for details */
+    padding: 10px; /* Spacing for details */
+  }
+
+
+  /* View More Button Styles */
+.view-more {
+    display: none; /* Hide by default */
+    text-align: center; /* Center text */
+    padding: 10px;
+    background-color: #ff9800; /* Button color */
+    color: white; /* Text color */
+    border-radius: 5px; /* Rounded corners */
+    margin: 10px; /* Margin around button */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  .destination:hover .view-more {
+    display: inline-block; /* Show button on hover */
+  }
+
+
+
+/* Deals & Offers Section */
+.deals-offers {
+  padding: 50px 0;
+  text-align: center; /* Center the text */
+  background-color: #fff; /* White background color */
+}
+
+.deals-offers h2 {
+  font-size: 2.5rem; /* Heading size */
+  margin-bottom: 20px; /* Spacing below heading */
+  color: #333; /* Heading color */
+}
+
+.deals-container {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(250px, 1fr)
+  ); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 0 20px; /* Padding on the sides */
+}
+
+.deal {
+  background-color: var(--card-background);
+  color: var(--card-text-color); /* Light grey background for deals */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.deal img {
+  width: 100%; /* Make image full width */
+  height: 150px; /* Fixed height for uniformity */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.deal h3 {
+  font-size: 1.5rem; /* Deal title size */
+  margin: 10px 0; /* Spacing above and below */
+}
+
+.price {
+  font-size: 1.2rem; /* Current price size */
+  color: #ff5722; /* Price color */
+  font-weight: bold; /* Bold price */
+  margin-bottom: 5px; /* Spacing below */
+}
+
+.original-price {
+  font-size: 1rem; /* Original price size */
+  text-decoration: line-through; /* Strike through original price */
+  color: #888; /* Light color for original price */
+}
+
+.deal button {
+  background-color: #ff9800; /* Button color */
+  color: white; /* Text color */
+  padding: 10px 15px; /* Padding inside button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  transition: background-color 0.3s ease; /* Smooth background color change */
+  margin-bottom: 15px; /* Spacing below button */
+}
+
+.deal button:hover {
+  background-color: #e68a00; /* Button hover color */
+}
+
+/* Hover effect */
+.deal:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px var(--card-hover-shadow); /* Lift effect on hover */
+}
+
+.countdown {
+    font-size: 1rem; /* Font size for the countdown */
+    color: #ff5722; /* Color for the countdown */
+    margin-top: 10px; /* Spacing above the countdown */
+  }
+  
+
+/* Customer Testimonials Section */
+.testimonials {
+  padding: 50px 0;
+  text-align: center; /* Center the text */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+.testimonials h2 {
+  font-size: 2.5rem; /* Heading size */
+  margin-bottom: 20px; /* Spacing below heading */
+  color: #333; /* Heading color */
+}
+
+.testimonials-container {
+  max-width: 800px; /* Max width of the testimonials container */
+  margin: 0 auto; /* Center the container */
+  overflow: hidden; /* Hide overflowing testimonials */
+}
+
+.testimonial {
+  display: none; /* Initially hide all testimonials */
+  padding: 20px; /* Padding for testimonials */
+  background-color: var(--card-background);
+  color: var(--card-text-color);
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.testimonial.active {
+  display: block;
+  background-color: var(--card-background);
+  color: var(--card-text-color); /* Show active testimonial */
+}
+
+/* Testimonial text styling */
+.testimonial p {
+  font-size: 1.2rem; /* Testimonial text size */
+  margin-bottom: 10px; /* Spacing below text */
+}
+
+.testimonial h4 {
+  font-size: 1rem; /* Customer name size */
+  color: #555; /* Name color */
+}
+
+/* Navigation buttons */
+.prev,
+.next {
+  margin: 10px; /* Margin for buttons */
+  padding: 10px 15px; /* Padding inside buttons */
+  border: none; /* Remove border */
+  background-color: #ff9800; /* Button color */
+  color: white; /* Text color */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #e68a00; /* Button hover color */
+}
+
+
+
+
+/* Footer Section */
+footer {
+  background-color: var(--footer-background);
+  color: var(--link-color);
+  padding: 20px 0; /* Padding for top and bottom */
+  text-align: center; /* Center the text */
+}
+
+.footer-container {
+  max-width: 800px; /* Max width for the footer content */
+  margin: 0 auto; /* Center the footer content */
+}
+
+.social-icons {
+  margin-bottom: 10px; /* Spacing below social icons */
+}
+
+.social-icons a {
+  margin: 0 10px; /* Spacing between icons */
+  display: inline-block; /* Inline block for spacing */
+}
+
+.social-icons img {
+  width: 30px; /* Set size for icons */
+  height: 30px; /* Set size for icons */
+  transition: transform 0.3s; /* Transition for hover effect */
+}
+
+.social-icons a:hover img {
+  transform: scale(1.2); /* Scale effect on hover */
+}
+
+footer p {
+  margin: 5px 0; /* Spacing for paragraphs */
+  font-size: 0.9rem; /* Smaller font size */
+}
+
+/* Links styling */
+footer a {
+  color: var(--link-color);
+  text-decoration: none; /* Remove underline */
+}
+
+footer a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Newsletter Subscription Styles */
+.newsletter {
+  margin-top: 20px;
+}
+
+.newsletter h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--link-color);
+}
+
+.newsletter-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  font-size: 1rem;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--button-background);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background-color: var(--button-hover);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the nav links by default on small screens */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Position absolute for dropdown */
+    background-color: #003580; /* Same background as header */
+    top: 60px; /* Position below the header */
+    right: 0; /* Align to the right */
+    width: 100%; /* Full width */
+    z-index: 100; /* Ensure above other elements */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .menu-toggle {
+    display: block; /* Show the hamburger menu icon on small screens */
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .search-form {
+    flex-direction: column;
+  }
+
+  .popular-destinations h2 {
+    font-size: 2rem; /* Smaller heading size on mobile */
+  }
+
+  .destination h3 {
+    font-size: 1.2rem; /* Smaller destination name on mobile */
+  }
+
+  .destination p {
+    font-size: 0.9rem; /* Smaller price size on mobile */
+  }
+
+  .deals-offers h2 {
+    font-size: 2rem; /* Smaller heading size on mobile */
+  }
+
+  .deal h3 {
+    font-size: 1.2rem; /* Smaller deal title on mobile */
+  }
+
+  .price {
+    font-size: 1rem; /* Smaller current price size on mobile */
+  }
+
+  .original-price {
+    font-size: 0.9rem; /* Smaller original price size on mobile */
+  }
+}
+>>>>>>> Stashed changes
