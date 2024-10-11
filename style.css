@@ -195,11 +195,14 @@ button:hover {
 }
 
 .search-form input,
-.search-form select {
+.search-form select,
+.search-form button  {
+  width: 100%;
   padding: 10px; /* Padding inside inputs */
   font-size: 1rem; /* Font size */
   border: none; /* Remove default border */
   border-radius: 5px; /* Rounded corners */
+  box-sizing: border-box; /* Ensure padding and borders are included in width */
 }
 
 .search-form button {
@@ -564,6 +567,12 @@ footer a:hover {
 
   .search-form {
     flex-direction: column;
+  }
+
+  .search-form input,
+  .search-form select,
+  .search-form button {
+    width: 100%; 
   }
 
   .popular-destinations h2 {
